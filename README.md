@@ -3,8 +3,9 @@
 ### Goals
 - Should allow to export a SQL database into a dump SQL file
 - Should be a Codeception command
-- Should read database credentials from Codeception Db module
-- Should generate the dump for a given suite, outputting to the given SQL dump file that the suite specifies
+- Should read database credentials from Codeception `Db` module
+- Should write the dump to the dump file specified in the `dump` parameter
+- Should generate a dump for a given suite that has the `Db` module. See examples below.
 - Should be extensible to provide methods that make it easier to export from specific frameworks
 - The first extension will be for WordPress databases
 
