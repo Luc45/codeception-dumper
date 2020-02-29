@@ -8,11 +8,8 @@
 - Should generate a dump for a given suite that has the `Db` module. See examples below.
 - Should be extensible to provide methods that make it easier to export from specific frameworks
 - The first extension will be for WordPress databases
-- Adds an optional "dump_rules" parameter to the `Db` module, which receives a string as parameter, that must match a file in the `_support` folder. This file must be a class that extends `Codeception_Dumper_Rules`.
+- Adds an optional "dump_rules" parameter to the `Db` module, which receives a string as parameter, that must match a file in the `_support` folder. This file must be a class that extends `Codeception_Dump_Rules`.
 - Should support modules that extend `Db`
-
-### Nice to haves
-- Minimize third party dependencies
 
 ### WordPress Dump Extension
 - Possibly a decorator or similar that extends a main class
@@ -27,4 +24,11 @@
 - I'm developing a website. (WIP)
 
 ### Examples
-- codecept dump acceptance
+Command: `codecept dump acceptance`
+
+Parses the `Codeception_Dump_Rules`, if one is specified, which might use an extension such as the `WordPress Dump Extension` to help create dump rules.
+
+Proceed to generate the dump as defined. If no Dump Rules are provided, just make a copy of the database as a dump file.
+
+### Nice to haves
+- Minimize third party dependencies
